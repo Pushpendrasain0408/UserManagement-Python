@@ -1,0 +1,26 @@
+{% extends 'authenticate.html' %}
+
+{% block content %}
+    <h1 style="width: 100%">{% block title %} Login Page {% endblock %}</h1>
+    <form method="post">
+        <p>
+            <label for="email">Email</label>
+            <input type="text" name="email"
+                   placeholder="Enter email"/>
+        </p>
+
+        <p>
+            <label for="password">Password</label>
+            <input type="text" name="password"
+                   placeholder="Enter your password"/>
+        </p>
+        <p>
+            <button type="submit">Log In</button>
+        </p>
+
+        <p>
+            <a href="{{ url_for('register') }}">Don't have a account, Register here</a>
+        </p>
+    </form>
+{% endblock %}
+
