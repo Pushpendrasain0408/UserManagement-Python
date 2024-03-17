@@ -1,54 +1,58 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h1 style="width: 100%">
+<div class = "updatePage">
+    <h1 style="width: 100%; text-align: center; font-family: Open Sans, sans-serif">
         {% block title %} Edit {{ user.firstname }}
                                {{ user.lastname }}'s Details
         {% endblock %}
     </h1>
+    <div class="f1Container">
     <form method="post">
-        <p>
+        <div class="editContainer">
+
             <label for="firstname">First Name</label>
             <input type="text" name="firstname"
                    value={{ user.firstName }}
                    placeholder="First name">
             </input>
-        </p>
 
-        <p>
+
+
             <label for="lastname">Last Name</label>
             <input type="text" name="lastname"
                    value={{ user.lastName }}
                    placeholder= "Last name">
             </input>
-        </p>
+            </div>
 
-        <p>
+
+            <div class="editContainer">
             <label for="email">Email</label>
             <input type="email" name="email"
                    value={{ user.email }}
                    placeholder ="user email">
             </input>
-        </p>
 
-        <p>
             <label for="city">City</label>
             <input type="text" name="city"
                    value={{ user.city }}
                    placeholder="City">
             </input>
-        </p>
+            </div>
 
-        <p>
+            <div class="contactContainer">
             <label for="contactNumber">Contact Number</label>
             <input type="number" name="contactnumber"
                    value={{ user.contactNumber }}
                    placeholder="Contact Number">
             </input>
-        </p>
-
-        <p>
+            </div>
+             <div class  = "submitButton">
             <button type="submit">Update User</button>
-        </p>
+             </div>
+
     </form>
+    </div>
+    </div>
 {% endblock %}

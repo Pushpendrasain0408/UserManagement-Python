@@ -2,22 +2,16 @@
 
 {% block content %}
     <h1 class="title">{% block title %} User {% endblock %}</h1>
-    <div class="content">
+    <div class="homeContent">
         {% for user in users %}
             <div class="user">
                 <p><b>#{{ user.id }}</b></p>
                 <b>
-                    <p class="name">
-                <a href="{{ url_for('user', user_id=user.id)}}">
-                    {{ user.firstname }} {{ user.lastname }}
-                </a>
-                    </p>
-
                     Name: {{ user.firstName }} {{ user.lastName }}</p>
                 </b>
-                <p>{{ user.email }}</p>
-                <p>{{user.contactNumber}}</p>
-                <p>{{user.city}}</p>
+                <p><b>Email: {{ user.email }}</b></p>
+                <p><b>Phone: {{user.contactNumber}}</b></p>
+                <p><b>City: {{user.city}}</b></p>
                 <p>
                     <a href = "{{ url_for('update',user_id=user.id) }}" />
                     Update User

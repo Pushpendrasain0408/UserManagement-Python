@@ -1,41 +1,66 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h1 style="width: 100%">{% block title %} Add a New User {% endblock %}</h1>
+<div class = "createPage">
+
+<div class="formContainer">
+<h1 class = "createHeader">{% block title %} Add a New User {% endblock %}</h1>
     <form method="post">
-        <p>
+        <div class =" mixContainer">
+
+            <div class ="inputContainer">
+
+
             <label for="firstname">First Name</label>
             <input type="text" name="firstname"
                    placeholder="First name"/>
-        </p>
+            </div>
 
-        <p>
+
+
+            <div class="inputContainer">
+
+
             <label for="lastname">Last Name</label>
             <input type="text" name="lastname"
                    placeholder="Last name"/>
-        </p>
+            </div>
 
-        <p>
+        </div>
+        <div class = "mixContainer">
+
+
+            <div class = "inputContainer">
             <label for="email">Email</label>
             <input type="email" name="email"
                    placeholder="email"/>
-        </p>
+            </div>
 
-        <p>
+
+
+            <div class = "inputContainer">
             <label for="contactNumber">ContactNumber</label>
-            <input type="number" name="contactNumber"
+            <input type="text" name="contactNumber"
                    placeholder="Enter your contact number"/>
+            </div>
 
-        </p>
+        </div>
 
-        <p>
-        <label for="city">City</label>
-            <input type="text" name="city"
+
+            <div class="inputCityContainer">
+            <div class =" inputContainer ">
+                <label for="city">City</label>
+                    <input type="text" name="city"
                    placeholder="city">
-        </p>
-        <p>
-            <button type="submit">Submit</button>
-        </p>
+            </div>
+        </div>
+
+
+            <div class  = "submitButton">
+            <button id = "createButton" type="submit">Submit</button>
+            </div>
     </form>
+</div>
+</div>
 {% endblock %}
 
